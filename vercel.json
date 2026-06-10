@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "http://120.55.183.188:8000/$1" }
+    { "source": "/(.*)", "destination": "https://www.lumina-core.cn/$1" }
   ]
 }
