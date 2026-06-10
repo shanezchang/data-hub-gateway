@@ -18,8 +18,10 @@ destination 暂时改回 `http://120.55.183.188:8000/$1`(明文,仅救急)。
 ## 文件
 ```
 vercel.json   把 /(.*) 全部反代到 https://www.lumina-core.cn/$1
-index.html    根路径 / 的极简首页(其余路径都被反代)
 ```
+⚠️ 不要在本仓库放任何静态文件(含 index.html):Vercel 静态文件优先于 rewrites,
+会把对应路径从后端"抢走"。根路径 / 必须透传 —— 后端在 / 返回
+{version, capabilities} 探针,llms.txt 的「缓存与同步」协议依赖它。
 
 ## 部署
 1. Vercel → Add New Project → Import `shanezchang/data-hub-gateway`
